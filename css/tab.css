@@ -9,7 +9,7 @@
     }
     .commonFrame{
         width: auto;
-        margin: 0 1rem;
+        padding: 0 1rem;
         padding-top: 6rem;
     }
     .heroBanner {
@@ -17,7 +17,6 @@
         background: url(../img/hero_img.jpg) no-repeat 50% 30% / cover;
     }
     .aboutme{
-       margin-top: 6rem;
        gap: 2rem;
        padding: 2rem;
     }
@@ -28,11 +27,9 @@
         gap: 2rem;
     }
     .skillandTolls{
-        margin-top: 6rem;
         padding: 2rem;
     }
     .otherEx{
-        margin-top: 6rem;
         padding: 2rem;
     }
     .bannerCon>div {
@@ -62,7 +59,5 @@
     .bannerCon dl>dd span{
         margin-bottom: .5rem;
     }
-
-
     
 }

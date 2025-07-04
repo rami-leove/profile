@@ -1,19 +1,142 @@
 @media (min-width:1920px){
     html{width:1920px;margin:0 auto;}
 }
+/* gnb메뉴 */
+.gnb {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: .5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 100000;
+}
+.gnb::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1.5rem;
+    padding: 1.3rem;
+    width: 52%;
+    margin-top: 1rem;
+    border: 1px solid transparent;
+    border-radius: 50px 0px 0px 50px;
+    background-color: var(--main-pink-color);
+    z-index: -1;
+    box-sizing: border-box;
+    box-shadow: 1px 3px 4px #00000024;
+}
+.gnb::after{
+    content: "";
+    position: absolute;
+    top:0;
+    right: -1.5rem;
+    padding: 1.3rem;
+    width: 56.2%;
+    margin-top: 1rem;
+    border-radius: 0px 50px 50px 0px;
+    border: 1px solid transparent;
+    background-color: var(--main-yellow-color);
+    z-index: -1;
+    box-sizing: border-box;
+    box-shadow: 2px 3px 4px #00000024;
+}
+.gnb a {
+    white-space: nowrap;
+    color: var(--light-font-color);
+    font-weight: 500;
+    transform: skewY(0deg);
+    display: inline-block;
+    font-size: 0.8rem;
+}
+.gnb>li:hover a{
+    transform: skewY(-12deg);
+    filter:drop-shadow(0 0 5px var(--main-yellow-color))
+}
+.nos{
+    position: relative;
+}
+.gnb .pinkTxt{
+    color: var(--main-pink-color);
+}
+.gnb>li.nos:hover a{
+    transform: initial;
+    filter:initial;
+}
+.hidnos{
+   position: absolute;
+   left:0;
+   top:0;
+   width:100%;
+    opacity: 0;
+    pointer-events: none;
+}
+.nos:hover .hidnos{
+    opacity: 1;
+    pointer-events: auto;
+}
+.nos:hover .orinos{
+    opacity: 0;
+    pointer-events: none;
+}
+.gnb ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    text-align: center;
+}
+@keyframes trem {
+    0%{
+        /* transform:rotate(-5deg) */
+        transform:scale(1)
+    }
+    100%{
+        /* transform:rotate(5deg) */
+        transform:scale(1.1)
+    }
+}
+.nos{
+    animation: trem 1s linear 0s infinite alternate;
+}
+.nos:hover{
+    animation-play-state: paused;
+}
+.nos img {
+    max-width: initial;
+    height: 4.5rem;
+    aspect-ratio: 139 / 80;
+}
+.hiddenGnb,
+.btnMenu{
+    display: none;
+}
 
+
+.contactList{
+    margin-top:1rem;
+}
+.forestToneBottomTxt.commonFrame{
+    padding-top: 0;
+}
 body{
     background: url("../img/bg_blue.png") no-repeat 50% 4%,
     url("../img/bg_pink.png") no-repeat  50% 13%;
 }
-.heroWrap{
+.heroWrap {
     background-color: var(--main-pink-color);
+    padding-top: 4rem;
 }
-.hero{
+.bannerStation.swiper {
+    padding-bottom: 2rem;
+}
+.hero {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding: 6rem 0;
+    padding: 3rem !important;
 }
 .heroTxt{
     text-align: center;
@@ -82,8 +205,9 @@ body{
     color: var(--main-blue-color);
     white-space: nowrap;
 }
-.autoBannerImg img{
-    height: 5rem;
+.autoBannerImg img {
+    height: 2.5rem;
+    object-fit: contain;
 }
 .autoBannerTrain{
     width: 100%;
@@ -99,11 +223,9 @@ body{
     padding: 3rem;
     display: flex;
     gap: 8rem;
-    margin-top: 6rem;
     padding-top: 7rem;
     position: relative;
     color: var(--light-font-color);
-    margin-bottom: 6rem;
 }
 .aboutme1{
     display: flex;
@@ -115,7 +237,7 @@ body{
     left: 1rem;
     font-size: 10rem;
     color: var(--main-pink-color);
-    -webkit-text-stroke: 2px var(--main-yellow-color);
+    -webkit-text-stroke: 0.1rem var(--main-yellow-color);
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.177);
     line-height: 62%;
     font-family: "Abhaya Libre", serif;
@@ -175,7 +297,6 @@ body{
     border: 2px solid var(--main-pink-color);
     border-radius: 30px;
     padding: 3rem;
-    margin-bottom: 6rem;
 }
 .skillToolTxt{
     text-align: center;
@@ -221,7 +342,6 @@ body{
     border: 2px solid var(--main-blue-color);
     border-radius: 30px;
     padding: 2rem;
-    margin-bottom: 6rem;
 }
 .otherExTxt{
     text-align: center;
@@ -270,17 +390,18 @@ body{
     margin-bottom: 0.5rem;
 }
 .popupList{
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1rem; */
 }
 .popupList li>figure {
     background-color: var(--main-yellow-color);
     border-radius: 20px;
     position: relative;
     background: none;
-    border: 1rem solid var(--main-yellow-color);
+    border: 0.4rem solid var(--main-yellow-color);
     line-height: 0;
+    overflow: hidden;
 }
 .popupList li>figure img{
     width:100%;
@@ -406,10 +527,10 @@ body{
 .project1 .stickyMenu,
 .project2 .stickyMenu{
     position: sticky;
-    top: 4rem;
+    top: 5.5rem;
     left: 0;
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
     /* margin-top: 2rem; */
     margin-bottom: 2rem;
     z-index: 10;
@@ -455,7 +576,6 @@ body{
     padding-top: 3rem;
 }
 .project2{
-    background-color: #3E4628;
     padding-top: 2rem;
 }
 .project1 .forestToneLogo{
@@ -470,22 +590,48 @@ body{
 .wacomLogo img{
     height: 2.5rem;
 }
-.project2{
-    background-color: #3888DD;
+.project2 {
     padding-top: 2rem;
+    background: #3d98df;
 }
-.project2 .wacomLogo{
+.project2 .wacomLogo {
     display: flex;
-    padding-right: 1rem;
-    margin: 0 auto;
-    justify-content: flex-end;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    padding-top: 0;
+    color: #fff;
 }
+.project2 .wacomLogo p{
+    margin-bottom: 2rem;
+    width: 60%;
+    margin: 0 auto;
+    font-weight: 200;
+    margin-bottom: .5rem;
+}
+.project1 .forestToneLogo p{
+    margin-bottom: 2rem;
+    width: 60%;
+    margin: 0 auto;
+    font-weight: 200;
+    margin-bottom: .5rem;
+}
+.project1 .forestToneLogo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    padding-top: 0;
+    color: #fff;
+}
+
 .forestToneBottom{
     padding: 10rem 0;
 }
-.wrapForest{
+.wrapForest {
     background-color: #F7F5F1;
     overflow: hidden;
+    padding-bottom: 16rem;
 }
 .forestToneBottom .forestToneBottomImg {
     display: flex;
@@ -603,8 +749,22 @@ body{
     text-align: center;
 }
 .wrapWacom {
-    background: #E4E4E4 url(../img/wacom_bottom_bg.svg) no-repeat 50% -21%;
+    background: #E4E4E4 url(../img/wacom_bottom_bg.svg) no-repeat 50% -45%;
     padding-top: 16rem;
+    padding-bottom: 6rem;
+}
+
+@media (max-width:1200px){
+    .wrapWacom {
+        background: #E4E4E4 url(../img/wacom_bottom_bg.svg) no-repeat 50% -25%;
+        padding-top: 16rem;
+    }
+}
+@media (max-width: 768px) {
+    .wrapWacom {
+        background: #E4E4E4 url(../img/wacom_bottom_bg.svg) no-repeat 50% -3%;
+        padding-top: 2rem;
+    }
 }
 .wrapWacom>img{
     width: 100%;
@@ -668,13 +828,6 @@ body{
     100% { transform: translateY(0); }
   }
 
-@font-face {
-    font-family: 'yg-jalnan';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .wacomBottom{
     color: #f2f2f2;
 }
@@ -697,24 +850,50 @@ body{
     gap: 1rem;
 }
 
-/* Contact */
 /* contact */
-.contect{
+.contect.commonFrame {
     text-align: center;
+    padding-bottom: 6rem;
 }
-.contect svg{
-    overflow: visible;
-    width: 80%;
+#typing-title {
+    font-family: 'LOTTERIACHAB';
+    color: var(--main-pink-color);
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+
+  #typing-title::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+    color: var(--main-blue-color)
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .contactMe {
+    border: 0.2rem solid var(--main-yellow-color);
+    border-radius: 500px 500px 0 0;
+    width: 270px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
 }
-#Layer_1 path{
-    fill: transparent;
-    stroke: #FF99C2;
-    stroke-width: 1;
-    /* transition: all 1s ease 0s; */
+.contactMe img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
 }
-#Layer_1.on  path{
-    stroke-dashoffset: 0 !important; 
-    fill: #FDFACB;
+.noise {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    /* z-index: -1; */
+    opacity: 0.04;
+    background: url(../img/noise.gif) repeat 50% 50%;
 }
-/* 자바스크립트에서 직접적용(인라인스타일)했기때문에 우선순위가 낮음.
-    그러므로 !important작성 */

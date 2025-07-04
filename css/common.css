@@ -61,10 +61,11 @@ strong{
     border-radius: 30px;
 }
 
-.commonFrame{
+.commonFrame {
     width: 1400px;
     margin: 0 auto;
     padding-top: 6rem;
+    box-sizing: border-box;
 }
 
 @keyframes swing {
@@ -89,3 +90,16 @@ strong{
       transform: translateY(-2px);
     }
   }
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LOTTERIACHAB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
