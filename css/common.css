@@ -1,0 +1,91 @@
+/* 공통적으로 들어가는 스타일 */
+:root{
+    --main-pink-color: #FF99C2;
+    --main-blue-color: #84C3EB;
+    --main-yellow-color: #F4F2BB;
+    --main-font-color: #444;
+    --light-font-color: #fff;
+    --bg-color: #F7F5F1;
+    --detail: 0.9rem
+    
+}
+html{
+    font-size: 20px;
+    font-family: "Paperlogy", sans-serif;
+    color: var(--main-font-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+}
+h1{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+h2{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+h3{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+h4{
+    font-size: 1rem;
+    font-weight: bold;
+}
+p{
+    line-height: 140%;
+}
+.detail{
+    font-size: 0.9rem;
+}
+button{
+    font-size: 0.8rem;
+}
+strong{
+    color: var(--main-color2);
+}
+
+/* 공통스타일 */
+.pinkBox{
+    background-color: var(--main-pink-color);
+    color: var(--main-yellow-color);
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--main-yellow-color);
+    border-radius: 30px;
+}
+.blueBox{
+    background-color: var(--main-blue-color);
+    color: var(--main-yellow-color);
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--main-yellow-color);
+    border-radius: 30px;
+}
+
+.commonFrame{
+    width: 1400px;
+    margin: 0 auto;
+    padding-top: 6rem;
+}
+
+@keyframes swing {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+}
+@keyframes bounceY {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(-4px);
+    }
+    50% {
+      transform: translateY(4px);
+    }
+    75% {
+      transform: translateY(-2px);
+    }
+  }

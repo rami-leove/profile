@@ -1,0 +1,68 @@
+/* 탭/패드 화면에 적용될 스타일 
+1024px 이상 -> 데스크탑
+768~1024px ->탭 패드
+768px 미만 -> 모바일
+*/
+@media (max-width:1400px) {
+    html{
+        font-size: 18px;
+    }
+    .commonFrame{
+        width: auto;
+        margin: 0 1rem;
+        padding-top: 6rem;
+    }
+    .heroBanner {
+        height: 600px;
+        background: url(../img/hero_img.jpg) no-repeat 50% 30% / cover;
+    }
+    .aboutme{
+       margin-top: 6rem;
+       gap: 2rem;
+       padding: 2rem;
+    }
+    .aboutme1>span{
+        font-size: 8rem;
+    }
+    .aboutme2{
+        gap: 2rem;
+    }
+    .skillandTolls{
+        margin-top: 6rem;
+        padding: 2rem;
+    }
+    .otherEx{
+        margin-top: 6rem;
+        padding: 2rem;
+    }
+    .bannerCon>div {
+        grid-template-columns: 270px 1fr 270px;
+        gap: 2rem;
+    }
+}
+@media (max-width:950px){
+    .aboutme{
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+    .aboutme1>img{
+        height: auto;
+    }
+    .skillToolBox ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .popupList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bannerCon>div {
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem;
+    }
+    .bannerCon dl>dd span{
+        margin-bottom: .5rem;
+    }
+
+
+    
+}

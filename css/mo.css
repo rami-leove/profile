@@ -1,0 +1,56 @@
+/* 탭/패드 화면에 적용될 스타일 
+1024px 이상 -> 데스크탑
+768~1024px ->탭 패드
+768px 미만 -> 모바일
+*/
+@media (max-width:767px){
+    html{
+        font-size: 14px;
+    }
+    .heroTxt>h1 {
+        white-space: pre-line;
+    }
+    .heroTxt>p {
+        white-space: pre-line;
+    }
+    .heroBanner {
+        height: 650px;
+        background: url(../img/hero_img.jpg) no-repeat 50% 50% / cover;
+    }
+    .aboutme{
+        padding: 1rem;
+    }
+    .aboutme1>img{
+        height: auto;
+    }
+    .skillandTolls{
+        padding: 1rem;
+    }
+    .skillToolBox ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .otherEx{
+        padding: 1rem;
+    }
+    .otherExBox {
+        flex-direction: column;
+    }
+    .bannerCon>div {
+        grid-template-columns: 200px 1fr 300px;
+    }
+    .bannerCon>div {
+        grid-template-columns: repeat(1,1fr);
+        gap: 1rem;
+    }
+    .bannerCon dl>dd span{
+        margin-bottom: 0;
+    }
+
+}
+
+@media (max-width:300px){
+    .heroBanner {
+        height: 600px;
+        background: url(../img/hero_img.jpg) no-repeat 50% 50% / cover;
+    }
+}
