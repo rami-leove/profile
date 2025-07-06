@@ -60,6 +60,25 @@ strong{
     border: 2px solid var(--main-yellow-color);
     border-radius: 30px;
 }
+@keyframes swing {
+    0%   { transform: rotate(0deg); }
+    20%  { transform: rotate(-10deg); }
+    40%  { transform: rotate(5deg); }
+    60%  { transform: rotate(-5deg); }
+    80%  { transform: rotate(3deg); }
+    100% { transform: rotate(-10deg); }
+  }
+  
+.pinkBox,
+.blueBox {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+  
+.pinkBox.swingOnce,
+.blueBox.swingOnce {
+    animation: swing 1s ease-in-out;
+}
 
 .commonFrame {
     width: 1400px;
@@ -68,28 +87,16 @@ strong{
     box-sizing: border-box;
 }
 
-@keyframes swing {
+/* @keyframes swing {
     0%{
         transform: rotate(0deg);
     }
     100%{
         transform: rotate(-10deg);
     }
-}
-@keyframes bounceY {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    25% {
-      transform: translateY(-4px);
-    }
-    50% {
-      transform: translateY(4px);
-    }
-    75% {
-      transform: translateY(-2px);
-    }
-  }
+} */
+
+
 @font-face {
     font-family: 'yg-jalnan';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');

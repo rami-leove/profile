@@ -14,7 +14,7 @@
     }
     .heroBanner {
         height: 600px;
-        background: url(../img/hero_img.jpg) no-repeat 50% 30% / cover;
+        background: url(../img/heroBanner.jpg) no-repeat 50% 50% / cover;
     }
     .aboutme{
        gap: 2rem;
@@ -36,8 +36,26 @@
         grid-template-columns: 270px 1fr 270px;
         gap: 2rem;
     }
+    .forestToneBottomTxt>section {
+        font-size: inherit;
+    }
+}
+@media (max-width:1200px) {
+    body{
+        background: url("../img/bg_blue.png") no-repeat 50% 4.6%,
+        url("../img/bg_pink.png") no-repeat  50% 13%;
+    }
+}
+@media (max-width:1000px) {
+    body{
+        background: url("../img/bg_blue.png") no-repeat 50% 5.3%,
+        url("../img/bg_pink.png") no-repeat  50% 13%;
+    }
 }
 @media (max-width:950px){
+    body{
+        background: url(../img/bg_blue.png) no-repeat 37% 5.7%, url(../img/bg_pink.png) no-repeat 24% 18%;
+    }
     .aboutme{
         flex-direction: column;
         align-items: center;

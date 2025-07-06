@@ -4,7 +4,9 @@
 768px 미만 -> 모바일
 */
 @media (max-width:767px){
-
+    body {
+        background: url(../img/bg_blue.png) no-repeat 36% 2.8%, url(../img/bg_pink.png) no-repeat 33% 8.5%;
+    }
     /* 모바일 메뉴 */
 .hiddenGnb{
     overflow: hidden;
@@ -124,9 +126,6 @@
         justify-content: center;
         font-size: 3rem;
     }
-    .contect br{
-        display: none;
-    }
     .hero {
         display: flex;
         flex-direction: column;
@@ -134,9 +133,9 @@
         padding: 6rem 0;
         padding: 3rem 1rem !important;
     }
-    .wacomBottomTxt.commonFrame{
+    /* .wacomBottomTxt.commonFrame{
         padding-top: 0!important;
-    }
+    } */
     .popupList {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -145,11 +144,13 @@
         padding: 0 1rem;
         padding-top: 6rem;
     }
-    .wacomBottomTxt br,.otherExTxt br,.bannersTxt br,.popupsTxt br{
+    .wacomBottomTxt br,
+    .otherExTxt br,
+    .bannersTxt br,
+    .popupsTxt br,
+    .contect br,
+    .forestToneBottomTxt p br{
         display: none;
-    }
-    body {
-        background: url(../img/bg_blue.png) no-repeat 50% 2.6%, url(../img/bg_pink.png) no-repeat 50% 13%;
     }
     .aboutme1>span {
         font-size: 6rem;
@@ -165,7 +166,7 @@
     }
     .heroBanner {
         height: 650px;
-        background: url(../img/hero_img.jpg) no-repeat 50% 50% / cover;
+        background: url(../img/heroBanner.jpg) no-repeat 50% 50% / cover;
     }
     .aboutme{
         padding: 1rem;
@@ -210,13 +211,25 @@
     .project1 .forestToneLogo p{
         width: auto;
     }
-    .forestToneBottomTxt>h1 {
+    .forestToneBottomTxt>h1{
         white-space: pre-line;
         text-align: center;
         font-size: 2.5rem;
     }
+    .wacomBottomTxt>h2{
+        white-space: pre-line;
+        margin: 3rem 0;
+    } 
     .contactMe{
         width:250px;
+    }
+    .forestToneBottomImg img{
+        width: 30%;
+    }
+    .forestToneBottomTxt p,
+    .wacomBottomSubTxt p{
+        font-size: 1.rem;
+        word-break: keep-all;
     }
 
 }
