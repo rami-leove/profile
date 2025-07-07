@@ -3,10 +3,13 @@
 768~1024px ->탭 패드
 768px 미만 -> 모바일
 */
-@media (max-width:767px){
-    body {
-        background: url(../img/bg_blue.png) no-repeat 36% 2.8%, url(../img/bg_pink.png) no-repeat 33% 8.5%;
+@media (max-width:768px){
+    .imgAll img {
+        width: initial;
+        margin:0 auto;
+        /* max-width: ; */
     }
+
     /* 모바일 메뉴 */
 .hiddenGnb{
     overflow: hidden;
@@ -87,7 +90,7 @@
 }
 .hiddenGnb.on .moGnb>li {
     color: #4996bd;
-    -webkit-text-stroke: .2rem #2630ab;
+    -webkit-text-stroke: .1rem #2630ab;
 }
 .hiddenGnb .moGnb>li.moResume{
     mix-blend-mode: initial;
@@ -109,6 +112,22 @@
     height: 4.5rem;
     aspect-ratio: 139 / 80;
 }
+.pj2SubMenu_mo {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 700;
+    gap: .5rem;
+    -webkit-text-stroke: 0px;
+    font-family: 'Paperlogy';
+    margin-top: 1rem;
+    color: #2630ab;
+}
+.pj2SubMenu_mo a{
+    padding: .3rem;
+    display: inline-flex;
+    align-items: center;
+}
 @keyframes trem_mo {
     0%{
         transform:scale(1)translateX(-50%)
@@ -120,11 +139,11 @@
     .moGnb {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.5rem;
         align-items: center;
         height: 100vh;
         justify-content: center;
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .hero {
         display: flex;
@@ -153,7 +172,8 @@
         display: none;
     }
     .aboutme1>span {
-        font-size: 6rem;
+        font-size: 8rem;
+        -webkit-text-stroke: 0.04rem var(--main-yellow-color);
     }
     html{
         font-size: 14px;
@@ -167,6 +187,7 @@
     .heroBanner {
         height: 650px;
         background: url(../img/heroBanner.jpg) no-repeat 50% 50% / cover;
+        background-attachment: fixed;
     }
     .aboutme{
         padding: 1rem;
@@ -231,13 +252,42 @@
         font-size: 1.rem;
         word-break: keep-all;
     }
+    .banners .deco2 {
+        height: 20rem;
+        top: -20%;
+        left: -14%
+    }
+    .deco3 {
+        top: 29%;
+        left: -4%;
+        transform: rotate(-85deg);
+        height: 11rem;
+    }
+    .autoBannerImg p {
+        font-size: 1.3rem;
+        font-weight: 200;
+        color: var(--main-blue-color);
+        white-space: nowrap;
+    }
+    .deco4 {
+        top: 1%;
+        left: 2%;
+        height: 7rem;
+    }
+    .keyward>dd {
+        flex-wrap: wrap;
+    }
+    .contactList {
+        flex-direction: column;
+    }
 
 }
 
 @media (max-width:300px){
     .heroBanner {
-        height: 600px;
-        background: url(../img/hero_img.jpg) no-repeat 50% 50% / cover;
+        height: 400px;
+        background: url(../img/heroBanner.jpg) no-repeat 50% 50% / cover;
+        background-attachment: fixed;
     }
     .moGnb {
         gap: 1rem;
@@ -247,5 +297,40 @@
         color: #4996bd;
         -webkit-text-stroke: .1rem #2630ab;
     }
-
+    .contect .deco1 {
+        height: 14rem;
+    }
+    #typing-title {
+        height: 120px;
+    }
+    .decTxt {
+        top: 105px;
+    }
+    .deco3 {
+        top: 43%;
+        left: -4%;
+        transform: rotate(-85deg);
+        height: 9rem;
+    }
+    .banners .deco2 {
+        height: 15rem;
+        top: -15%;
+        left: -14%;
+    }
+    .aboutme1>span {
+        font-size: 4rem;
+    }
+    .keyward>dd {
+        flex-wrap: wrap;
+    }
+    .aboutmeProfile dt {
+        width: 70px;
+    }
+    .aboutmeTxt>div h4{
+        white-space: pre-line;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        border-radius: 50px;
+    }
 }

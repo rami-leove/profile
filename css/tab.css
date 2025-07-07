@@ -14,7 +14,8 @@
     }
     .heroBanner {
         height: 600px;
-        background: url(../img/heroBanner.jpg) no-repeat 50% 50% / cover;
+        background: url(../img/heroBanner.jpg) no-repeat 50% 98% / cover;
+        background-attachment: fixed;
     }
     .aboutme{
        gap: 2rem;
@@ -39,23 +40,17 @@
     .forestToneBottomTxt>section {
         font-size: inherit;
     }
-}
-@media (max-width:1200px) {
-    body{
-        background: url("../img/bg_blue.png") no-repeat 50% 4.6%,
-        url("../img/bg_pink.png") no-repeat  50% 13%;
+    .deco4 {
+        position: absolute;
+        top: 3%;
+        left: 2%;
+        height: 7rem;
+        transform: rotate(-13deg);
+        animation: swing 1s linear 0s infinite alternate;
     }
 }
-@media (max-width:1000px) {
-    body{
-        background: url("../img/bg_blue.png") no-repeat 50% 5.3%,
-        url("../img/bg_pink.png") no-repeat  50% 13%;
-    }
-}
+
 @media (max-width:950px){
-    body{
-        background: url(../img/bg_blue.png) no-repeat 37% 5.7%, url(../img/bg_pink.png) no-repeat 24% 18%;
-    }
     .aboutme{
         flex-direction: column;
         align-items: center;
@@ -77,5 +72,21 @@
     .bannerCon dl>dd span{
         margin-bottom: .5rem;
     }
-    
+    .aboutmeTxt>ul li {
+        color: var(--main-font-color);
+    }
+    .autoBannerImg p {
+        font-size: 1.5rem;
+        font-weight: 200;
+        color: var(--main-blue-color);
+        white-space: nowrap;
+    }
+    .deco4 {
+        position: absolute;
+        top: 25%;
+        left: 12%;
+        height: 10rem;
+        animation: swing 1s linear 0s infinite alternate;
+    }
 }
+    

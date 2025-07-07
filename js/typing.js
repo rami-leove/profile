@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded",function(){
           titleElement.textContent = ""; // 텍스트 초기화
           index = 0;
           typeText(); // 다시 시작
-        }, 2000); // 2000ms = 2초
+        }, 3000); // 2000ms = 2초
       }
     }
   
