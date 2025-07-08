@@ -203,8 +203,12 @@ body{
 .heroTxt>p{
     font-weight: 300;
 }
-.heroTxt>p>span{
+.heroTxt .nameSubSpan{
     font-weight: 500;
+    color: var(--main-yellow-color);
+}
+.heroTxt .nameSpan{
+    font-weight: 300;
     color: var(--main-yellow-color);
 }
 .heroTxt>p:nth-of-type(1){
@@ -224,11 +228,35 @@ body{
 }
 .deco3 {
     position: absolute;
-    top: 25%;
-    left: 6%;
-    transform: rotate(-69deg);
+    top: 28%;
+    left: 2%;
+    transform: rotate(-97deg);
     height: 13rem;
 }
+.deco5 {
+    position: absolute;
+    top: 27%;
+    right: 15%;
+    height: 6rem;
+    animation: twinkle 1.3s linear 0s infinite alternate;
+}
+.deco6 {
+    position: absolute;
+    top: 37%;
+    right: 12%;
+    height: 3rem;
+    animation: twinkle 1s linear 0s infinite alternate;
+}
+@keyframes twinkle {
+    0%{
+        filter: drop-shadow(0px 0px 0px #ffffffab);
+    }
+    100%{
+        filter: drop-shadow(5px 5px 10px #ffffffab)
+        drop-shadow(-5px -5px 10px #ffffffab);
+    }
+}
+
 /* 띠배너 */
 .autoBannerStation{
     background-color: var(--main-yellow-color);
@@ -288,7 +316,16 @@ body{
     left: -11%;
     height: 14rem;
     transform: rotate(-13deg);
-    animation: swing 1s linear 0s infinite alternate;
+    animation: decoswing 1s linear 0s infinite alternate;
+}
+@keyframes decoswing {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(-12deg);
+    }
+    
 }
 .aboutme{
     border: 2px solid var(--main-yellow-color);
@@ -402,7 +439,7 @@ body{
     transition: all 0.5s ease 0s;
 }
 .skillToolBox li>h4{
-    color: var(--main-pink-color);
+    color: var(--main-font-color);
 }
 .skillToolBox li:hover{
     background-color: var(--main-pink-color);
@@ -1037,4 +1074,23 @@ body{
     color: var(--main-yellow-color);
     -webkit-text-stroke: 2px var(--main-pink-color);
     text-transform: uppercase;
+}
+.ltr{
+    transform:translate(-1rem);
+    opacity: 0;
+    transition:all 0.8s ease 0s;
+}
+.ltr.on{
+    transform:translate(0rem);
+    opacity: 1;
+}
+
+.rtl{
+    transform:translate(1rem);
+    opacity: 0;
+    transition:all 0.8s ease 0s;
+}
+.rtl.on{
+    transform:translate(0rem);
+    opacity: 1;
 }

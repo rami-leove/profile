@@ -7,12 +7,16 @@ document.addEventListener("DOMContentLoaded",function(){
         const isVisible = entry.isIntersecting && entry.intersectionRatio >= 0.5;
 
         if (isVisible) {
+          // 보일 때
           entry.target.classList.add('swingOnce');
 
           // 애니메이션이 끝나면 다시 제거해서 재진입 시 재실행 가능
-          entry.target.addEventListener('animationend', () => {
-            entry.target.classList.remove('swingOnce');
-          }, { once: true });
+          // entry.target.addEventListener('animationend', () => {
+          //   entry.target.classList.remove('swingOnce');
+          // }, { once: true });
+        }else{
+          // 안보일 때
+          entry.target.classList.remove('swingOnce');
         }
       });
     },

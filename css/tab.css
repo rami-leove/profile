@@ -46,11 +46,19 @@
         left: 2%;
         height: 7rem;
         transform: rotate(-13deg);
-        animation: swing 1s linear 0s infinite alternate;
+    }
+    .deco5 {
+        top: 22%;
+        right: 9%;
+    }
+    .deco6 {
+        top: 32%;
+        right: 4%;
     }
 }
 
 @media (max-width:950px){
+
     .aboutme{
         flex-direction: column;
         align-items: center;
@@ -86,7 +94,10 @@
         top: 25%;
         left: 12%;
         height: 10rem;
-        animation: swing 1s linear 0s infinite alternate;
+    }
+    .deco5 {
+        top: 21%;
+        right: 7%;
     }
 }
     

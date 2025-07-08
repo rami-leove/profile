@@ -11,131 +11,131 @@
     }
 
     /* 모바일 메뉴 */
-.hiddenGnb{
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 100; 
-    opacity: 0;
-    pointer-events: none;
-    transition:all .2s ease 0s;
-}
-.hiddenGnb.on{
-    opacity: 1;
-    pointer-events: auto;
-}
-.hiddenGnb::before{
-    content: "";
-    position: absolute;
-    width:200px;
-    height:200px;
-    background-color: var(--main-yellow-color);
-    left:calc(50% - 100px);
-    top:-100px;
-    border-radius: 50%;
-    z-index: -1;
-    transition: all .61s ease 0s;
-    transform: scale(0);
-}
-.hiddenGnb.on::before{
-    transform: scale(11);
-}
-
-.hiddenGnb::after{
-    content: "";
-    position: absolute;
-    width:200px;
-    height:200px;
-    background-color: var(--main-pink-color);
-    left:calc(50% - 100px);
-    top:-100px;
-    border-radius: 50%;
-    z-index: -1;
-    transition: all .6s ease 0.15s;
-    transform: scale(0);
-}
-.hiddenGnb.on::after{
-    transform: scale(5);
-}
-
-.moGnb {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    height: 100vh;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease 0.2s;
-}
-.moGnb .moResume img{
-    height: 4rem;
-}
-.hiddenGnb.on .moGnb{
-    opacity: 1;
-    pointer-events: auto;
-    font-family: 'LOTTERIACHAB';
-}
-.hiddenGnb .moGnb>li {
-    mix-blend-mode: color-burn;
-    color: transparent;
-}
-.hiddenGnb.on .moGnb>li {
-    color: #4996bd;
-    -webkit-text-stroke: .1rem #2630ab;
-}
-.hiddenGnb .moGnb>li.moResume{
-    mix-blend-mode: initial;
-}
-.btnMenu{
-    position: fixed;
-    top: 0.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: 0;
-    cursor: pointer;
-    display: none;
-    transition: all 1s ease 0s;
-    z-index: 1000; 
-    animation: trem_mo 1s linear 0s infinite alternate;
-}
-.btnMenu img{
-    max-width: initial;
-    height: 4.5rem;
-    aspect-ratio: 139 / 80;
-}
-.pj2SubMenu_mo {
-    display: flex;
-    flex-direction: column;
-    font-size: 1rem;
-    font-weight: 700;
-    gap: .5rem;
-    -webkit-text-stroke: 0px;
-    font-family: 'Paperlogy';
-    margin-top: 1rem;
-    color: #2630ab;
-}
-.pj2SubMenu_mo a{
-    padding: .3rem;
-    display: inline-flex;
-    align-items: center;
-}
-@keyframes trem_mo {
-    0%{
-        transform:scale(1)translateX(-50%)
+    .hiddenGnb{
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 100; 
+        opacity: 0;
+        pointer-events: none;
+        transition:all .2s ease 0s;
     }
-    100%{
-        transform:scale(1.1)translateX(-50%)
+    .hiddenGnb.on{
+        opacity: 1;
+        pointer-events: auto;
     }
-}
+    .hiddenGnb::before{
+        content: "";
+        position: absolute;
+        width:200px;
+        height:200px;
+        background-color: var(--main-yellow-color);
+        left:calc(50% - 100px);
+        top:-100px;
+        border-radius: 50%;
+        z-index: -1;
+        transition: all .61s ease 0s;
+        transform: scale(0);
+    }
+    .hiddenGnb.on::before{
+        transform: scale(11);
+    }
+
+    .hiddenGnb::after{
+        content: "";
+        position: absolute;
+        width:200px;
+        height:200px;
+        background-color: var(--main-pink-color);
+        left:calc(50% - 100px);
+        top:-100px;
+        border-radius: 50%;
+        z-index: -1;
+        transition: all .6s ease 0.15s;
+        transform: scale(0);
+    }
+    .hiddenGnb.on::after{
+        transform: scale(5);
+    }
+
+    .moGnb {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        height: 100vh;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease 0.2s;
+    }
+    .moGnb .moResume img{
+        height: 4rem;
+    }
+    .hiddenGnb.on .moGnb{
+        opacity: 1;
+        pointer-events: auto;
+        font-family: 'LOTTERIACHAB';
+    }
+    .hiddenGnb .moGnb>li {
+        mix-blend-mode: color-burn;
+        color: transparent;
+    }
+    .hiddenGnb.on .moGnb>li {
+        color: #4996bd;
+        -webkit-text-stroke: .1rem #2630ab;
+    }
+    .hiddenGnb .moGnb>li.moResume{
+        mix-blend-mode: initial;
+    }
+    .btnMenu{
+        position: fixed;
+        top: 0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: 0;
+        cursor: pointer;
+        display: none;
+        transition: all 1s ease 0s;
+        z-index: 1000; 
+        animation: trem_mo 1s linear 0s infinite alternate;
+    }
+    .btnMenu img{
+        max-width: initial;
+        height: 4.5rem;
+        aspect-ratio: 139 / 80;
+    }
+    .pj2SubMenu_mo {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        font-weight: 700;
+        gap: .5rem;
+        -webkit-text-stroke: 0px;
+        font-family: 'Paperlogy';
+        margin-top: 1rem;
+        color: #2630ab;
+    }
+    .pj2SubMenu_mo a{
+        padding: .3rem;
+        display: inline-flex;
+        align-items: center;
+    }
+    @keyframes trem_mo {
+        0%{
+            transform:scale(1)translateX(-50%)
+        }
+        100%{
+            transform:scale(1.1)translateX(-50%)
+        }
+    }
     .moGnb {
         display: flex;
         flex-direction: column;
@@ -178,15 +178,15 @@
     html{
         font-size: 14px;
     }
-    .heroTxt>h1 {
+    .heroTxt .name {
         white-space: pre-line;
     }
-    .heroTxt>p {
+    .heroTxt .nameSub {
         white-space: pre-line;
     }
     .heroBanner {
         height: 650px;
-        background: url(../img/heroBanner.jpg) no-repeat 50% 50% / cover;
+        background: url(../img/heroBanner_mo.jpg) no-repeat 50% 50% / cover;
         background-attachment: fixed;
     }
     .aboutme{
@@ -280,13 +280,32 @@
     .contactList {
         flex-direction: column;
     }
+    .deco5 {
+        top: 33%;
+        right: 10%;
+    }
+    .deco6 {
+        top: 39%;
+        right: 5%;
+    }
+    .projectTxt p br{display: none;}
 
 }
-
+@media (max-width:400px){
+    .contect .deco1 {
+        height: 19rem;
+    }
+    .heroTxt .name {
+        white-space: normal;
+    }
+    .heroTxt .nameSub {
+        white-space: normal;
+    }
+}
 @media (max-width:300px){
     .heroBanner {
         height: 400px;
-        background: url(../img/heroBanner.jpg) no-repeat 50% 50% / cover;
+        background: url(../img/heroBanner_mo.jpg) no-repeat 50% 50% / cover;
         background-attachment: fixed;
     }
     .moGnb {
@@ -332,5 +351,15 @@
         text-align: center;
         justify-content: center;
         border-radius: 50px;
+    }
+    .deco5 {
+        top: 43%;
+        right: 10%;
+        height: 5rem;
+    }
+    .deco6 {
+        top: 49%;
+        right: 5%;
+        height: 2rem;
     }
 }
