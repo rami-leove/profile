@@ -4,6 +4,8 @@
 768px 미만 -> 모바일
 */
 @media (max-width:768px){
+
+    
     .imgAll img {
         width: initial;
         margin:0 auto;
@@ -172,7 +174,7 @@
         display: none;
     }
     .aboutme1>span {
-        font-size: 8rem;
+        font-size: 7rem;
         -webkit-text-stroke: 0.04rem var(--main-yellow-color);
     }
     html{
@@ -185,8 +187,8 @@
         white-space: pre-line;
     }
     .heroBanner {
-        height: 650px;
-        background: url(../img/heroBanner_mo.jpg) no-repeat 50% 50% / cover;
+        height: 580px;
+        background: url(../img/heroBanner_mo2.jpg) no-repeat 50% 50% / cover;
         background-attachment: fixed;
     }
     .aboutme{
@@ -281,20 +283,28 @@
         flex-direction: column;
     }
     .deco5 {
-        top: 33%;
+        top: 34%;
         right: 10%;
     }
-    .deco6 {
+   .deco6 {
         top: 39%;
         right: 5%;
     }
     .projectTxt p br{display: none;}
+    .contect .deco1 {
+        width: 50%;
+        aspect-ratio: 1 / 1;
+        height: auto;
+    }
 
 }
 @media (max-width:400px){
-    .contect .deco1 {
-        height: 19rem;
+    .heroBanner {
+        height: 475px;
+        background: url(../img/heroBanner_mo.jpg) no-repeat 50% 50% / cover;
+        background-attachment: fixed;
     }
+    
     .heroTxt .name {
         white-space: normal;
     }
@@ -304,7 +314,7 @@
 }
 @media (max-width:300px){
     .heroBanner {
-        height: 400px;
+        height: 475px;
         background: url(../img/heroBanner_mo.jpg) no-repeat 50% 50% / cover;
         background-attachment: fixed;
     }
@@ -317,19 +327,17 @@
         -webkit-text-stroke: .1rem #2630ab;
     }
     .contect .deco1 {
-        height: 14rem;
+        height: 7rem;
     }
-    #typing-title {
-        height: 120px;
-    }
-    .decTxt {
+    .contect .decTxt{
         top: 105px;
+        font-size: 2rem;
     }
     .deco3 {
-        top: 43%;
-        left: -4%;
-        transform: rotate(-85deg);
-        height: 9rem;
+        top: 40%;
+        left: -2%;
+        transform: rotate(-86deg);
+        height: 7rem;
     }
     .banners .deco2 {
         height: 15rem;
@@ -345,21 +353,29 @@
     .aboutmeProfile dt {
         width: 70px;
     }
-    .aboutmeTxt>div h4{
+    .aboutmeTxt>div h4 {
         white-space: pre-line;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        border-radius: 50px;
     }
     .deco5 {
-        top: 43%;
-        right: 10%;
-        height: 5rem;
+        top: 40%;
+        right: 4%
     }
     .deco6 {
-        top: 49%;
+        top: 46%;
         right: 5%;
         height: 2rem;
+    }
+    .aboutme1>span {
+        font-size: 3rem
+    }
+    .skillToolTxt>p br{
+        display: none;
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    /* 기기가 아이폰인경우 */
+    .heroBanner{
+        background-attachment: scroll !important;
     }
 }

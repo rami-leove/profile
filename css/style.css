@@ -309,6 +309,7 @@ body{
 /* aboutme */
 .aboutmeFrame{
     position: relative;
+    overflow-x: hidden;
 }
 .deco4 {
     position: absolute;
@@ -411,6 +412,7 @@ body{
     border: 2px solid var(--main-pink-color);
     border-radius: 30px;
     padding: 3rem;
+    overflow-x: hidden;
 }
 .skillToolTxt{
     text-align: center;
@@ -456,6 +458,7 @@ body{
     border: 2px solid var(--main-blue-color);
     border-radius: 30px;
     padding: 2rem;
+    overflow-x: hidden;
 }
 .otherExTxt{
     text-align: center;
@@ -495,6 +498,9 @@ body{
 }
 
 /* Popup Design */
+.popups{
+    overflow-x: hidden;
+}
 .popupsTxt{
     text-align: center;
     margin-bottom: 3rem;
@@ -564,6 +570,7 @@ body{
 /* banner */
 .banners{
     position: relative;
+    overflow-x: hidden;
 }
 .banners .deco2{
     position: absolute;
@@ -643,6 +650,7 @@ body{
 .projectTxt{
     text-align: center;
     margin-bottom: 3rem;
+    overflow-x: hidden;
 }
 .projectTxt>h3{
     display: inline-flex;
@@ -708,6 +716,7 @@ body{
     margin: 0 auto;
     justify-content: flex-end;
     padding-right: 1rem;
+    overflow-x: hidden;
 }
 .forestToneLogo img{
     height: 2.5rem;
@@ -726,6 +735,7 @@ body{
     gap: 0.5rem;
     padding-top: 0;
     color: #fff;
+    overflow-x: hidden;
 }
 .project2 .wacomLogo p{
     margin-bottom: 2rem;
@@ -989,7 +999,6 @@ body{
     opacity: .7;
     position: sticky;
     top: 35px;
-    left: 47px;
     z-index: -1;
     animation: spin 10s linear 0s infinite;
 }
@@ -1004,6 +1013,7 @@ body{
 .contect.commonFrame {
     text-align: center;
     padding-bottom: 6rem;
+    /* overflow-x: hidden; */
 }
 #typing-title {
     font-family: 'LOTTERIACHAB';
