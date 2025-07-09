@@ -21,8 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
         let distance = this.scrollY
         console.log(distance)
 
-        document.querySelector("body").style.background = `url("./img/wave.png") repeat-x ${distance/10}% 3%,
-        url("./img/bg_pink.png") repeat-x  ${-distance/10}% 12%`
+        document.querySelector("body").style.background = `
+        url("./img/wave.png") repeat-x ${distance/10}% 2.6%,
+        url("./img/bg_pink.png") repeat-x  ${-distance/10}% ${(window.innerWidth>768&&window.innerWidth<=1024)?"24":"12"}%`
 
     })
 

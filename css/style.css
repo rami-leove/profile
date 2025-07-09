@@ -1,9 +1,11 @@
 @media (min-width:1920px){
-    html{width:1920px;margin:0 auto;}
+    /* html{width:1920px;margin:0 auto;} */
+
+
 }
 body{
     background:
-    url("../img/wave.png") repeat-x 0% 3%,
+    url("../img/wave.png") repeat-x 0% 2.6%,
     url("../img/bg_pink.png") no-repeat  50% 13%;
     /* animation: bgWave 200s linear 0s infinite; */
 }
@@ -18,6 +20,15 @@ body{
         url("../img/wave.png") repeat-x 5000% 3%,
         url("../img/bg_pink.png") repeat-x  -5000% 13%;
     }
+}
+
+/* 마우스커서 */
+#custom_cursor {
+    position: fixed;
+    height: 32px;
+    pointer-events: none;
+    z-index: 999999;
+    transform: translate(5%, 0%);
 }
 
 
@@ -570,7 +581,7 @@ body{
 /* banner */
 .banners{
     position: relative;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 .banners .deco2{
     position: absolute;
@@ -701,8 +712,9 @@ body{
     text-align: center;
     line-height: 0;
 }
-.imgAll img{
+.imgAll img {
     width: 100%;
+    max-width: 1920px;
 }
 .project1{
     background-color: #3E4628;
