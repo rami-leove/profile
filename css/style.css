@@ -25,12 +25,11 @@ body{
 /* 마우스커서 */
 #custom_cursor {
     position: fixed;
-    height: 32px;
     pointer-events: none;
     z-index: 999999;
-    transform: translate(5%, 0%);
+    top: 19.6%;
+    left: 16.5%;
 }
-
 
 .noise {
     position: fixed;

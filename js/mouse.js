@@ -1,18 +1,22 @@
-document.addEventListener("DOMContentLoaded",function(){
+document.addEventListener("DOMContentLoaded", function () {
     const cursor = document.getElementById('custom_cursor');
+    let resized = false;
 
-    // 마우스 움직일 때 따라다니기
     document.addEventListener('mousemove', (e) => {
-    cursor.style.left = `${e.clientX}px`;
-    cursor.style.top = `${e.clientY}px`;
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
+
+        if (!resized) {
+            cursor.style.height = '32px';
+            resized = true;
+        }
     });
 
-    // 클릭 시 이미지 변경
     document.addEventListener('mousedown', () => {
-    cursor.src = './img/mouse_at.png';
+        cursor.src = './img/mouse_at.png';
     });
 
     document.addEventListener('mouseup', () => {
-    cursor.src = './img/mouse.png';
+        cursor.src = './img/mouse.png';
     });
-})
+});
