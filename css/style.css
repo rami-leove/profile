@@ -268,36 +268,41 @@ body{
 }
 
 /* 띠배너 */
-.autoBannerStation{
+.autoBannerStation {
     background-color: var(--main-yellow-color);
     padding: 1rem 0;
+    overflow: hidden;
 }
 
-.autoBannerImg{
+.autoBannerImg {
     display: flex;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
     transition-timing-function: linear!important;
 }
 .autoBannerImg li{
     width: auto;
-    /* animation: scrolling 6s; */
+    flex-shrink: 0;
     text-align: center;
-    
+    white-space: nowrap;
+    width: max-content;
 }
-@keyframes scrolling {
-
-    0% {
-        transform: translateX(0px);
-        -webkit-transform: translateX(0px);
+@keyframes move {
+    0%{
+        transform: translateX(0%);
     }
-
-    100% {
-        transform: translateX(-3069px);
-        -webkit-transform: translateX(-3069px);
+    100%{
+        transform: translateX(-50%);
     }
-    
 }
+.autoBannerImg.train1{
+    animation: move 30s linear 0s infinite;
+}
+.autoBannerImg.train2{
+    animation: move 30s linear 0s infinite;
+}
+
 .autoBannerImg p{
     font-size: 2rem;
     font-weight: 200;
@@ -305,13 +310,13 @@ body{
     white-space: nowrap;
 }
 .autoBannerImg img {
+    width: 2.5rem;
     height: 2.5rem;
     object-fit: contain;
 }
 .autoBannerTrain {
     width: 100%;
-    overflow: hidden;
-    transition-timing-function: linear!important;
+    display: inline-flex;
 }
 
 

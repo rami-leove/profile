@@ -16,6 +16,9 @@ html{
     background-color: var(--bg-color);
     scroll-behavior: smooth;
 }
+ul,ol,dl{
+    list-style: none;
+}
 h1{
     font-size: 1.3rem;
     font-weight: bold;

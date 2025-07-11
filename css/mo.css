@@ -170,7 +170,8 @@
     .bannersTxt br,
     .popupsTxt br,
     .contect br,
-    .forestToneBottomTxt p br{
+    .forestToneBottomTxt br,
+    .skillToolTxt br{
         display: none;
     }
     .aboutme1>span {
@@ -226,7 +227,7 @@
         display: block;
     }
     .project2 .wacomLogo>p{
-        white-space: pre-line;
+        /* white-space: pre-line; */
     }
     .project2 .wacomLogo p{
         width: auto;
